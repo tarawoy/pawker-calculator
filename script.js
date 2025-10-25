@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 jBC += j.chips; jBM += j.mult; 
                 if (jokerId === 'joker146' && gS.handType === 'Pair') {
-                    // Tubby Greed case handled later
+                    
                 } else if (j.xmult != 1) { 
                     jBX.push(j.xmult);
                 }
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 const ranks = gS.activeHand.filter(c => c && c.edition !== 'stone' && c.edition !== 'fur' && c.rank).map(c => rankOrder[c.rank]);
                                 if (ranks.length === 5) {
                                     const isAllEven = ranks.every(r => r % 2 === 0);
-                                    const standardOddRanks = [3, 5, 7, 9];
+                                    const standardOddRanks = [3, 5, 7, 9]; 
                                     const isAllStandardOdd = ranks.every(r => standardOddRanks.includes(r));
                                     if (isAllEven || isAllStandardOdd) {
                                         jBX.push(4);
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
              const rSEl = document.getElementById("resultScore");
 
              if(rCEl) rCEl.textContent = Math.round(tC).toLocaleString('en-US'); 
-             if(rMEl) rMEl.textContent = tM.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); // Menampilkan 1 desimal
+             if(rMEl) rMEl.textContent = tM.toLocaleString('en-US'); 
              if(rSEl) rSEl.textContent = Math.round(fS).toLocaleString('en-US'); 
              console.log("Score calculation finished.");
 
