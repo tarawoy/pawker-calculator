@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawker Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="dashboard-column">
+            <h1>🐾 Pawker Calculator</h1>
+            <div class="section" id="results-section">
+                <h2>Final Score</h2>
+                <h3 id="resultScore" class="final-score-display">0</h3>
+                <div class="score-breakdown">
+                    <h3>Total Chips: <span id="resultChips">0</span></h3>
+                    <h3>Total Mult: <span id="resultMult">0</span></h3>
+                </div>
+                <button id="calculateButton">Calculate Pawker Score!</button>
+            </div>
+            <div class="section" id="joker-dashboard">
+                <h2>Active Jokers</h2>
+                <p>Add Jokers from the library.</p>
+                <div id="active-jokers-list"></div>
+            </div>
+        </div>
+
+        <div class="controls-column">
+            <nav class="tabs-nav">
+                <button class="tab-link active" data-tab="tab-hand">Hands</button>
+                <button class="tab-link" data-tab="tab-jokers">Jokers (Library)</button>
+                <button class="tab-link" data-tab="tab-cards">Cards</button>
+            </nav>
+            <div class="tabs-content">
+                <div id="tab-hand" class="tab-content active">
+                    <h2>Hand Settings</h2>
+                    <div class="section">
+                        <label for="playedHandType">Played Hand Type (Auto-Detected):</label>
+                        <select id="playedHandType" disabled>
+                            <option value="High Card">High Card</option> <option value="Pair">Pair</option> <option value="Two Pair">Two Pair</option>
+                            <option value="Three of a Kind">Three of a Kind</option> <option value="Straight">Straight</option> <option value="Flush">Flush</option>
+                            <option value="Full House">Full House</option> <option value="Four of a Kind">Four of a Kind</option>
+                            <option value="Straight Flush">Straight Flush</option> <option value="Five of a Kind">Five of a Kind</option>
+                            <option value="Flush House">Flush House</option>
+                            <option value="Flush Five">Flush Five</option>
+                        </select>
+                    </div>
+                    <div class="section">
+                        <label for="totalCardsScoredInput">Total Cards Scored This Run:</label>
+                        <input type="number" id="totalCardsScoredInput" value="0" min="0">
+                    </div>
+                    <div class="section first-hand-section">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="isFirstHandCheckbox"> Is this the First Hand of the Ante?
+                        </label>
+                    </div>
+                    <div class="section">
+                        <h3>Toys Levels</h3> <ul id="hand-levels-list">
+                            <li><label>High Card:</label><span class="hand-value-display" id="display-High_Card"></span> :<input type="number" class="level-input" data-hand="High Card" value="1" min="1"></li>
+                            <li><label>Pair:</label><span class="hand-value-display" id="display-Pair"></span> :<input type="number" class="level-input" data-hand="Pair" value="1" min="1"></li>
+                            <li><label>Two Pair:</label><span class="hand-value-display" id="display-Two_Pair"></span> :<input type="number" class="level-input" data-hand="Two Pair" value="1" min="1"></li>
+                            <li><label>Three of a Kind:</label><span class="hand-value-display" id="display-Three_of_a_Kind"></span> :<input type="number" class="level-input" data-hand="Three of a Kind" value="1" min="1"></li>
+                            <li><label>Straight:</label><span class="hand-value-display" id="display-Straight"></span> :<input type="number" class="level-input" data-hand="Straight" value="1" min="1"></li>
+                            <li><label>Flush:</label><span class="hand-value-display" id="display-Flush"></span> :<input type="number" class="level-input" data-hand="Flush" value="1" min="1"></li>
+                            <li><label>Full House:</label><span class="hand-value-display" id="display-Full_House"></span> :<input type="number" class="level-input" data-hand="Full House" value="1" min="1"></li>
+                            <li><label>Four of a Kind:</label><span class="hand-value-display" id="display-Four_of_a_Kind"></span> :<input type="number" class="level-input" data-hand="Four of a Kind" value="1" min="1"></li>
+                            <li><label>Straight Flush:</label><span class="hand-value-display" id="display-Straight_Flush"></span> :<input type="number" class="level-input" data-hand="Straight Flush" value="1" min="1"></li>
+                            <li><label>Five of a Kind:</label><span class="hand-value-display" id="display-Five_of_a_Kind"></span> :<input type="number" class="level-input" data-hand="Five of a Kind" value="1" min="1"></li>
+                            <li><label>Flush House:</label><span class="hand-value-display" id="display-Flush_House"></span> :<input type="number" class="level-input" data-hand="Flush House" value="1" min="1"></li>
+                            <li><label>Flush Five:</label><span class="hand-value-display" id="display-Flush_Five"></span> :<input type="number" class="level-input" data-hand="Flush Five" value="1" min="1"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tab-jokers" class="tab-content">
+                    <h2>Joker Library</h2>
+                    <input type="text" id="jokerSearch" placeholder="Search for Jokers...">
+                    <div id="joker-library-grid" class="section"><p>Loading...</p></div>
+                </div>
+                <div id="tab-cards" class="tab-content">
+                    <h2>Played Hand (Max 5 Cards)</h2>
+                    <div class="section" id="active-hand-section"><h3>Active Hand</h3><div id="active-hand-list"></div></div>
+                    <div class="section" id="card-library-section"><h3>Card Library (Click to Add)</h3><div id="card-library-grid"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jokerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle">Edit Joker Slot</h2>
+            <div class="modal-body">
+                <img id="modalJokerImage" src="" alt="Joker Image"><h3 id="modalJokerName">Joker Name</h3>
+                <p id="modalJokerDesc">Desc...</p><hr>
+                <strong>Multipliers (Editable)</strong>
+                <label for="jokerChips">+Chips:</label><input type="number" id="jokerChips" value="0">
+                <label for="jokerMult">+Mult:</label><input type="number" id="jokerMult" value="0">
+                <label for="jokerXMult">xMult:</label><input type="number" id="jokerXMult" value="1" step="0.1">
+                <button id="saveJokerButton">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="joker_db.js"></script>
+    <script src="card_db.js"></script>
+    <script src="hand_levels_db.js"></script>
+    <script src="modifiers_db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
