@@ -306,7 +306,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker22",
     name: "Take My Meowny",
-    desc: "Description for Joker 22.",
+    desc: "+2 Gold if Attack is a High Card",
     img: "images/jokers/Jokers_22_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -473,10 +473,11 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker38",
-    name: "Joker 38",
-    desc: "Description for Joker 38.",
+    name: "Meowmmy",
+    desc: "+30 Score per 3, 6, or 9 scored",
     img: "images/jokers/Jokers_38_77x100.png",
-    chips: 0, mult: 0, xmult: 1, effect: null
+    chips: 0, mult: 0, xmult: 1,
+    effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["3", "6", "9"] }, bonus: { chips: 30 } }
   },
   {
     id: "joker39",
@@ -1199,8 +1200,8 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker145",
-    name: "Joker 110",
-    desc: "Description for Joker 110.",
+    name: "Catsle",
+    desc: "6x Mult if Attack contains only a Jack, a Queen, and a King",
     img: "images/jokers/Jokers2_15.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -1325,10 +1326,26 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker155",
-    name: "Joker 120",
-    desc: "Description for Joker 120.",
+    name: "ZigZag Chubby Cat",
+    desc: "+12 Mult if played hand contains a Three of a Kind ",
     img: "images/jokers/Jokers2_25.png",
-    chips: 0, mult: 0, xmult: 1, effect: null
+    chips: 0, 
+    mult: 0, 
+    xmult: 1,
+
+    effect: {
+      type: "conditional", 
+      trigger: "onHandPlay", 
+      condition: {
+        property: "handType", 
+        value: "Three of a Kind"      
+      },
+      bonus: {
+        chips: 0, 
+        mult: 12,
+        xmult: 1
+      }
+    }
   },
   {
     id: "joker156",
