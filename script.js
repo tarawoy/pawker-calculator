@@ -284,7 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (j.effect.handler_id === 'suit_polarity') { const vS=gS.activeHand.filter(c=>c && c.edition!=='stone' && c.edition!=='fur').map(c=>c.suit); if (vS.length>0) { const iAR=vS.every(s=>s==='h'||s==='d'); const iAB=vS.every(s=>s==='c'||s==='s'); if (iAR) jBC+=100; else if (iAB) jBC-=100; } }
                         else if (j.effect.handler_id === 'meowsers_2_and_7') { const r=gS.activeHand.filter(c=>c && c.edition!=='stone' && c.edition!=='fur').map(c=>c.rank); if (r.includes('2') && r.includes('7')) jBX.push(5); }
                         else if (j.effect.handler_id === 'meowsers_5_and_7') { const r=gS.activeHand.filter(c=>c && c.edition!=='stone' && c.edition!=='fur').map(c=>c.rank); if (r.includes('5') && r.includes('7')) jBX.push(4); }
-                        else if (j.effect.handler_id === 'torini_jqk') { const r=gS.activeHand.filter(c=>c && c.edition!=='stone' && c.edition!=='fur').map(c=>c.rank); if (r.includes('J') && r.includes('Q') && r.includes('K')) jBX.push(6); }
                         else if (j.effect.handler_id === 'odd_even_full_hand') {
                             if (gS.playedCardCount === 5) {
                                 const ranks = gS.activeHand.filter(c => c && c.edition !== 'stone' && c.edition !== 'fur' && c.rank).map(c => rankOrder[c.rank]);
@@ -301,6 +300,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     if (cMC && j.effect.type === 'conditional') { const b=j.effect.bonus; jBC+=b?.chips||0; jBM+=b?.mult||0; if ((b?.xmult||1)>1) jBX.push(b.xmult); }
+                }
+                
+                if (jokerId === 'joker145') {
+                   const playedRanks = gS.activeHand.filter(c => c && c.edition !== 'stone' && c.edition !== 'fur' && c.rank).map(c => c.rank);
+                   const hasJ = playedRanks.includes('J');
+                   const hasQ = playedRanks.includes('Q');
+                   const hasK = playedRanks.includes('K');
+                   const allowedHandTypesForCatsle = ['Flush', 'Straight', 'Straight Flush']; 
+                   
+                   if (allowedHandTypesForCatsle.includes(gS.handType) && hasJ && hasQ && hasK) {
+                       jBX.push(6);
+                       console.log("Applied Catsle (joker145) x6 Mult");
+                   }
                 }
             });
             let tJX = jBX.reduce((a, v) => a * v, 1);
