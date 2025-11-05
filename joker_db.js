@@ -767,8 +767,8 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker78",
-    name: "joker78",
-    desc: "nan",
+    name: "Pawn On Moon",
+    desc: "+1 Attack per turn",
     img: "images/jokers/Jokers_78_77x100.png",
     chips: 0, mult: 12, xmult: 1, effect: null
   },
@@ -1536,6 +1536,148 @@ const JOKER_LIBRARY = [
     name: "BAM! You Are Cooking",
     desc: "Create 3 Uncommon or greater rarity Jokers if final Attack of the turn contains Four of a Kind, destroy this Joker",
     img: "images/jokers/Jokers2_41.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker172",
+    name: "Andy The Cat",
+    desc: "+15 Mult if no Discards have been used this battle",
+    img: "images/jokers/1-AndyTheCat.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker173",
+    name: "Camping Catty",
+    desc: "+5 Gold on final Attack of the turn",
+    img: "images/jokers/2-CampingCatty.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker174",
+    name: "Catruck",
+    desc: "Gains +10 Score per card scored, loses -10 Score per card Discarded",
+    img: "images/jokers/3-Catruck.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker175",
+    name: "Catvolver",
+    desc: "3x Mult if Attack contains a Straight",
+    img: "images/jokers/4-Catvolver.png",
+    
+    chips: 0, 
+    mult: 0, 
+    xmult: 1,
+
+    effect: {
+      type: "conditional", 
+      trigger: "onHandPlay", 
+      condition: {
+        property: "handType", 
+        value: "Straight"      
+      },
+      bonus: {
+        chips: 0, 
+        mult: 0,
+        xmult: 3
+      }
+    }
+  },
+  {
+    id: "joker176",
+    name: "Caught On Camera",
+    desc: "Gains 0.05x Mult if Attack contains a Pair",
+    img: "images/jokers/5-CaughtOnCamera.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker177",
+    name: "Full House Chubby",
+    desc: "+35 Mult if played hand contains a Full House",
+    img: "images/jokers/6-FullHouseChubby.png",
+	
+    chips: 0, 
+    mult: 0, 
+    xmult: 1,
+
+    effect: {
+      type: "conditional", 
+      trigger: "onHandPlay", 
+      condition: {
+        property: "handType", 
+        value: "Full House"      
+      },
+      bonus: {
+        chips: 0, 
+        mult: 35,
+        xmult: 1
+      }
+    }
+  },
+  {
+    id: "joker178",
+    name: "Grim Reapurr",
+    desc: "Destroy played card if first Attack in the turn has exactly 1 card and all Discards remaining",
+    img: "images/jokers/7-GrimReapurr.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker179",
+    name: "Jolly Cat",
+    desc: "+45 Score if played hand contains a Pair",
+    img: "images/jokers/8-JollyCat.png",
+	
+    chips: 0, 
+    mult: 0, 
+    xmult: 1,
+
+    effect: {
+      type: "conditional", 
+      trigger: "onHandPlay", 
+      condition: {
+        property: "handType", 
+        value: "Pair"      
+      },
+      bonus: {
+        chips: 45, 
+        mult: 0,
+        xmult: 1
+      }
+    }
+  },
+  {
+    id: "joker180",
+    name: "Luckat",
+    desc: "+2 Gold per 7 Discarded",
+    img: "images/jokers/9-Luckat.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker181",
+    name: "Prat The Army Cat",
+    desc: "-1 hand size, +1 Attack",
+    img: "images/jokers/10-PratTheArmyCat.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker182",
+    name: "Tired Catventurer",
+    desc: "Destroy played card if first Attack in the turn has exactly 1 non-face card, create a random face card in hand",
+    img: "images/jokers/11-TiredCatventurer.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker183",
+    name: "Torri",
+    desc: "x7 Mult if Attack contains a 6, 7, and 8",
+    img: "images/jokers/12-Torri.png",
+    chips: 0, mult: 0, xmult: 1, effect: null
+  },
+  {
+    id: "joker184",
+    name: "Zombine",
+    desc: "+1 Discard this turn per Fur card discarded",
+    img: "images/jokers/13-Zombine.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   }
 ];
