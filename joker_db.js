@@ -25,7 +25,7 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker2",
-    name: "ZigZag Kity",
+    name: "ZigZag Kitty",
     desc: "+100 Score if played hand contains a Three of a Kind",
     img: "images/jokers/Jokers_2_77x100.png",
     
@@ -49,7 +49,7 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker3",
-    name: "Mad Kity",
+    name: "Mad Kitty",
     desc: "+100 Score if played hand contains a Two Pair",
     img: "images/jokers/Jokers_3_77x100.png",
     
@@ -73,7 +73,7 @@ const JOKER_LIBRARY = [
   },
   {
     id: "joker4",
-    name: "Flush Kity",
+    name: "Flush Kitty",
     desc: "+10 Mult if played hand contains a Flush",
     img: "images/jokers/Jokers_4_77x100.png",
     
@@ -98,7 +98,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker5",
     name: "Halfie",
-    desc: "+21 Mult if played hand contains 2 or fewer cards",
+    desc: "+21 Mult if Attack contains 3 or fewer cards",
     img: "images/jokers/Jokers_5_77x100.png",
 	
     chips: 0,
@@ -111,7 +111,7 @@ const JOKER_LIBRARY = [
       condition: {
         property: "playedCardCount",
         comparison: "<=",
-        value: 2
+        value: 3
       },
       bonus: {
         chips: 0,
@@ -123,7 +123,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker6",
     name: "Silhouette",
-    desc: "+1.3x Mult for every empty Joker slot (MANUAL SET)",
+    desc: "1.3x Mult for each empty Joker slot (MANUAL SET)",
     img: "images/jokers/Jokers_6_77x100.png",
     chips: 0, mult: 0, xmult: 1.3, effect: null
   },
@@ -154,7 +154,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker8",
     name: "Catriple",
-    desc: "+3x Mult if played hand contains Three of a Kind",
+    desc: "3x Mult if Attack contains Three of a Kind",
     img: "images/jokers/Jokers_8_77x100.png",
 	
     chips: 0, 
@@ -178,28 +178,28 @@ const JOKER_LIBRARY = [
   {
     id: "joker9",
     name: "Ocat",
-    desc: "Gain +1 Gold for every J, Q or K Discarded",
+    desc: "+1 Gold per face card Discarded",
     img: "images/jokers/Jokers_9_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker10",
     name: "Lincat",
-    desc: "A Straight gives 1 bonus attack this round",
+    desc: "+1 Attack if Attack contains a Straight",
     img: "images/jokers/Jokers_10_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker11",
     name: "Go Go Blue Pawer Ranger!",
-    desc: "Full Houses give 1 bonus Attack and minus 1 Discard this turn",
+    desc: "+1 Attack and -1 Discard if Attack contains a Full House",
     img: "images/jokers/Jokers_11_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker12",
     name: "DemoniCat",
-    desc: "+21 Mult per 6 Scored",
+    desc: "+21 Mult per 6 scored",
     img: "images/jokers/Jokers_12_77x100.png",
 	
     chips: 0,
@@ -224,21 +224,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker13",
     name: "Catter Up!",
-    desc: "Removes all Discards and gives you 3 bonus Attacks per turn",
+    desc: "+3 Attacks per turn, set Discard amount to 0",
     img: "images/jokers/Jokers_13_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker14",
     name: "Referee Cat",
-    desc: "Discarding an Ace of Diamonds gives +1 Attack for this turn",
+    desc: "+1 Attack this turn per Ace of Diamonds discarded",
     img: "images/jokers/Jokers_14_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker15",
     name: "Kat In The Box",
-    desc: "Every hand has an equal chance to give -1, -2, -3 Mult or +1, +2 Golds.",
+    desc: "Equal chance to -1,-2,-3 Mult or +1, +2 Gold",
     img: "images/jokers/Jokers_15_77x100.png",
 	
   chips: 0,
@@ -255,14 +255,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker16",
     name: "Nyaa",
-    desc: "If the Scoring hand has One of Each Suit gain 1 extra Attack.",
+    desc: "+1 Attack this turn if Attack has every suit",
     img: "images/jokers/Jokers_16_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker17",
     name: "Paw Up",
-    desc: "+100 Chips if hand is only Hearts/Diamonds. -100 Chips if hand is only Clubs/Spades.",
+    desc: "+100 Score if Attack contains only Hearts or Diamonds, -100 Score if Attack contains only Clubs or Spades",
     img: "images/jokers/Jokers_17_77x100.png",
 
   chips: 0,
@@ -285,21 +285,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker19",
     name: "Pulp Feline",
-    desc: "70 Score for every Empty Joker slot",
+    desc: "+70 Score for each empty Joker slot",
     img: "images/jokers/Jokers_19_77x100.png",
     chips: 70, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker20",
     name: "Royal Cat Guard",
-    desc: "Discarded Face Cards will add 0.3 Mult",
+    desc: "Gains 0.3× Mult per face card Discarded",
     img: "images/jokers/Jokers_20_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker21",
     name: "Mystic Cat",
-    desc: "+10 Mult if discards remaining is exactly 0",
+    desc: "+10 Mult if exactly 0 discards remaining",
     img: "images/jokers/Jokers_21_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -313,21 +313,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker23",
     name: "Lucky Campurr",
-    desc: "Four of a Kind will add a random Lucky card to your hand",
+    desc: "Create a random Lucky card in hand if Attack contains a Four of a Kind",
     img: "images/jokers/Jokers_23_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker24",
     name: "Blooming Kitty",
-    desc: "If the Scoring hand has One of Each Suit this card gains 0.2x Mult. It loses -0.5x Mult for every Flush played.",
+    desc: "Gains 0.2x Mult if Attack has every suit, loses -0.5x Mult if Attack contains a Flush",
     img: "images/jokers/Jokers_24_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker25",
     name: "Polaroid Cat",
-    desc: "Scored face cards give +6 Mult",
+    desc: "Scored face cards give +8 Mult",
     img: "images/jokers/Jokers_25_77x100.png",
 	
     chips: 0,
@@ -345,7 +345,7 @@ const JOKER_LIBRARY = [
       },
       bonus: {
         chips: 0,
-        mult: 6,
+        mult: 8,
         xmult: 1
       }
     }
@@ -353,7 +353,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker26",
     name: "Slice of Cat",
-    desc: "Scored 2 give this card +9 Score",
+    desc: "Gains +9 Score per 2 scored",
     img: "images/jokers/Jokers_26_77x100.png",
 	
     chips: 9,
@@ -378,21 +378,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker27",
     name: "Benny & Blue",
-    desc: "Add 1 Discard to this turn if played hand is exactly 2 cards",
+    desc: "+1 Discard this turn if Attack has exactly 2 cards",
     img: "images/jokers/Jokers_27_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker28",
     name: "Eggcelent Cat",
-    desc: "If a single card is played, it is destroyed.",
+    desc: "Destroy played card if Attack has exactly 1 card",
     img: "images/jokers/Jokers_28_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker29",
     name: "Yang Ying",
-    desc: "Odd cards give +33 Score",
+    desc: "+33 Score per odd card scored",
     img: "images/jokers/Jokers_29_77x100.png",
 
     chips: 0,
@@ -418,21 +418,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker30",
     name: "Cattening",
-    desc: "Discarding an 8 of Spades gives +1 Attack for this turn",
+    desc: "+1 Attack this turn per 8 of Spades discarded",
     img: "images/jokers/Jokers_30_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker31",
     name: "Furry Ball",
-    desc: "Gains x0.18 for every Fur card scored",
+    desc: "Gains 0.18x Mult per Fur card scored",
     img: "images/jokers/Jokers_31_77x100.png",
     chips: 0, mult: 0, xmult: 0.18, effect: null
   },
   {
     id: "joker32",
     name: "Cat Purrgular",
-    desc: "Every Spades you Discard gives you +1 Gold",
+    desc: "+1 Gold per Spade Discarded",
     img: "images/jokers/Jokers_32_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -446,28 +446,28 @@ const JOKER_LIBRARY = [
   {
     id: "joker34",
     name: "Impurrster!",
-    desc: "If exactly 3 cards are played and is a Three of a Kind, three Random cards in your hand change to Clubs",
+    desc: "3 random cards in your hand change to Clubs if Attack is a Three of a Kind and has exactly 3 cards",
     img: "images/jokers/Jokers_34_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker35",
     name: "Impurrfect Wizard",
-    desc: "A Straight including a 3 and 7 will give you one Witchcat card (Must have space)",
+    desc: "Create 1 random Witchcat card (must have space) if Attack contains a Straight, 3, and 7",
     img: "images/jokers/Jokers_35_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker36",
     name: "Rock Balancat",
-    desc: "Scored Stone cards gives +2 Gold",
+    desc: "+2 Gold per Stone card scored",
     img: "images/jokers/Jokers_36_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker37",
     name: "My Purrecious",
-    desc: "First hand played this battle is a single Ace you get 5 Gold",
+    desc: "+5 Gold if first Attack of the battle is only a single Ace",
     img: "images/jokers/Jokers_37_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -482,21 +482,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker39",
     name: "Popcorn Cat",
-    desc: "+110 Score. -5 Score for every hand played",
+    desc: "+110 Score, −5 Score for every Attack",
     img: "images/jokers/Jokers_39_77x100.png",
     chips: 110, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker40",
     name: "Lazy Cat King",
-    desc: "Gains +2 Score per Face Card Discarded",
+    desc: "Gains +2 Score per face card Discarded",
     img: "images/jokers/Jokers_40_77x100.png",
     chips: 2, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker41",
     name: "Sad Kitty Joker",
-    desc: "x4 Mult. Every Attack destroys a Random card in your hand.",
+    desc: "4x Mult, destroys a random card in your hand each Attack",
     img: "images/jokers/Jokers_41_77x100.png",
     chips: 0, mult: 0, xmult: 4, effect: null
   },
@@ -510,7 +510,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker43",
     name: "Banner Joker",
-    desc: "+60 Score if discards remaining is 2 or more",
+    desc: "+60 Score if 2 or more discards remaining",
     img: "images/jokers/Jokers_43_77x100.png",
     chips: 60, mult: 0, xmult: 1, effect: null
   },
@@ -524,14 +524,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker45",
     name: "Postman Cat",
-    desc: "Gives you +1 Hand Size",
+    desc: "+1 hand size",
     img: "images/jokers/Jokers_45_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker46",
     name: "Cool Cat",
-    desc: "Gains 6 Score for every played hand that is exactly 1 card.",
+    desc: "Gains +6 Score if Attack is a High Card",
     img: "images/jokers/Jokers_46_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "playedCardCount", comparison: "<=", value: 1 }, bonus: { chips: 6 } }
@@ -539,28 +539,28 @@ const JOKER_LIBRARY = [
   {
     id: "joker47",
     name: "Ghost Cat",
-    desc: "Every time you Discard you gain +2 Gold",
+    desc: "+2 Gold per Discard",
     img: "images/jokers/Jokers_47_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker48",
     name: "Sneaky Burglar Cat",
-    desc: "12 Score for each 2 or 7 in Deck",
+    desc: "Gives +12 Score for each 2 and 7 in Deck",
     img: "images/jokers/Jokers_48_77x100.png",
     chips: 12, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker49",
     name: "TripleMeow",
-    desc: "Last Attack of the round is x3 Mult",
+    desc: "3× Mult on final Attack of the turn",
     img: "images/jokers/Jokers_49_77x100.png",
     chips: 0, mult: 0, xmult: 3, effect: null
   },
   {
     id: "joker50",
     name: "Cat Furtune",
-    desc: "+7 Mult and 70 Score per 7 Scored",
+    desc: "+70 Score and +7 Mult per 7 scored",
     img: "images/jokers/Jokers_50_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", value: "7" }, bonus: { chips: 70, mult: 7 } }
@@ -568,14 +568,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker51",
     name: "GreedyCat",
-    desc: "Straight, Full House and Flush gives 4 Golds",
+    desc: "+4 Gold if Attack contains a Straight, Full House, or Flush",
     img: "images/jokers/Jokers_51_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker52",
     name: "Meowen",
-    desc: "First Three Attacks adds a random Mult between 0–6",
+    desc: "Random +0 to +6 Mult for first 3 Attacks of the battle",
     img: "images/jokers/Jokers_52_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "manual_random", trigger: "onHandPlay", options: [0, 1, 2, 3, 4, 5, 6], bonus_type: "mult" }
@@ -583,70 +583,70 @@ const JOKER_LIBRARY = [
   {
     id: "joker53",
     name: "VampireCat",
-    desc: "Scored Hearts give 2 health.",
+    desc: "+2 Health per Heart scored",
     img: "images/jokers/Jokers_53_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker54",
     name: "Go Go Green Pawer Ranger",
-    desc: "Scored Seals give this card 0.06x Mult",
+    desc: "0.06x Mult applied to scored Seal cards",
     img: "images/jokers/Jokers_54_77x100.png",
     chips: 0, mult: 0, xmult: 0.06, effect: null
   },
   {
     id: "joker55",
     name: "Cat Cupid",
-    desc: "Adds x0.1 Mult Per Queen Discarded",
+    desc: "Gains 0.1x Mult per Queen Discarded",
     img: "images/jokers/Jokers_55_77x100.png",
     chips: 0, mult: 0, xmult: 0.1, effect: null
   },
   {
     id: "joker56",
     name: "Pawphecy",
-    desc: "If played hand is Straight Flush, this Joker is destroyed. Create two random high rarity Jokers (Need space)",
+    desc: "Create two random Rare or Legendary Jokers (must have space) if Attack is a Straight Flush, destroy this Joker",
     img: "images/jokers/Jokers_56_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker57",
     name: "Penguicat",
-    desc: "Adds 10 Score Per Jack Discarded (caps at 1000)",
+    desc: "Gains +10 Score per Jack Discarded (caps at 1000)",
     img: "images/jokers/Jokers_57_77x100.png",
     chips: 10, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker58",
     name: "Sharkey & Catty",
-    desc: "+0.5 Mult per card Scored. -1 Mult per card Discarded",
+    desc: "Gains +0.5 Mult per card scored, loses -1 Mult per card Discarded",
     img: "images/jokers/Jokers_58_77x100.png",
     chips: 0, mult: 0.5, xmult: 1, effect: null
   },
   {
     id: "joker59",
     name: "Big Paw",
-    desc: "Gives x0.2 Mult for each Wild Card in your Deck",
+    desc: "Gives 0.2x Mult for each Wild card in Deck",
     img: "images/jokers/Jokers_59_77x100.png",
     chips: 0, mult: 0, xmult: 0.2, effect: null
   },
   {
     id: "joker60",
     name: "ComediCat",
-    desc: "125 Score. Loses 25 for every empty joker slot.",
+    desc: "125 Score, -25 Score for each empty joker slot",
     img: "images/jokers/Jokers_60_77x100.png",
     chips: 125, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker61",
     name: "CuteCat",
-    desc: "+10 Score per Spades in Deck",
+    desc: "Gives +10 Score for each Spades in Deck",
     img: "images/jokers/Jokers_61_77x100.png",
     chips: 10, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker62",
     name: "Educated",
-    desc: "4 Mult per A, 3, 6 or 10 scored",
+    desc: "+4 Mult per 3, 6, 10, or Ace scored",
     img: "images/jokers/Jokers_62_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["A", "3", "6", "10"] }, bonus: { mult: 4 } }
@@ -654,7 +654,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker63",
     name: "PopeCat",
-    desc: "5 Mult per 7, 10 or Queen scored.",
+    desc: "+5 Mult per 7, 10, or Queen scored",
     img: "images/jokers/Jokers_63_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["7", "10", "Q"] }, bonus: { mult: 5 } }
@@ -662,7 +662,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker64",
     name: "SmugglerCat",
-    desc: "+4x Mult if played hand contains a Four of a Kind",
+    desc: "Gives 4x Mult if played hand contains a Four of a Kind",
     img: "images/jokers/Jokers_64_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "handType", value: "Four of a Kind" }, bonus: { xmult: 4 } }
@@ -670,14 +670,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker65",
     name: "Diamond Miner Cat",
-    desc: "x0.09 Mult per Diamond in Deck",
+    desc: "Gains 0.09x Mult for each Diamond in Deck",
     img: "images/jokers/Jokers_65_77x100.png",
     chips: 0, mult: 0, xmult: 0.09, effect: null
   },
   {
     id: "joker66",
-    name: "Mewstler",
-    desc: "High Card gives a 20% chance to gain 1 Attack. 80% chance to lose 1 Health.",
+    name: "Meowstler",
+    desc: "20% chance to gain +1 Attack, 80% chance to lose -1 Health if Attack is a High Card",
     img: "images/jokers/Jokers_66_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -707,7 +707,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker70",
     name: "Catboard Box",
-    desc: "Every time you play exactly 4 cards: 10% Chance to +15 Mult, otherwise +1 Gold.",
+    desc: "10% chance to +15 Mult, 90% chance to +1 Gold if Attack has exactly 4 cards",
     img: "images/jokers/Jokers_70_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "manual_probabilistic", trigger: "onHandPlay", condition: { property: "playedCardCount", comparison: "===", value: 4 }, probability: 0.10, bonus: { mult: 15 } }
@@ -739,14 +739,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker74",
     name: "BananaCat",
-    desc: "A Straight gives 1 bonus Discard this round and +2 Gold",
+    desc: "+1 Discard this turn and +2 Gold if attack contains a Straight",
     img: "images/jokers/Jokers_74_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker75",
     name: "Homeless Cat",
-    desc: "A Straight makes you lose 3 Gold. Straights add 0.3x Mult to this card.",
+    desc: "Gains 0.3x Mult if Attack contains a Straight, -3 Gold if Attack contains a Straight",
     img: "images/jokers/Jokers_75_77x100.png",
     chips: 0, mult: 0, xmult: 0.3,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "handType", value: "Straight" }, bonus: { xmult: 0.3 } }
@@ -761,7 +761,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker77",
     name: "Rainbow Jester Cat",
-    desc: "If the Scoring hand has one of each suit x3 Mult",
+    desc: "3x Mult if Attack has every suit",
     img: "images/jokers/Jokers_77_77x100.png",
     chips: 0, mult: 0, xmult: 3, effect: null
   },
@@ -775,14 +775,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker79",
     name: "Catrobatics",
-    desc: "If you have more than 2 Attacks left, this card gives you +12 Mult",
+    desc: "+12 Mult if more than 2 Attacks remaining",
     img: "images/jokers/Jokers_79_77x100.png",
     chips: 0, mult: 12, xmult: 1, effect: null
   },
   {
     id: "joker80",
     name: "Furtune Cat",
-    desc: "Every 3 played gives this card +8 Score",
+    desc: "Gains +8 Score per 3 played",
     img: "images/jokers/Jokers_80_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", value: "3" }, bonus: { chips: 8 } }
@@ -790,21 +790,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker81",
     name: "Kwazy Kat",
-    desc: "Allows duplicate Jokers to show up in shop and boosters.",
+    desc: "Allows duplicate Jokers to show up in shop and boosters",
     img: "images/jokers/Jokers_81_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker82",
     name: "Meowzilla",
-    desc: "First Attack of the battle is 3x Mult",
+    desc: "3X Mult on first Attack of the battle",
     img: "images/jokers/Jokers_82_77x100.png",
     chips: 0, mult: 0, xmult: 3, effect: null
   },
   {
     id: "joker83",
     name: "Playful Kitty",
-    desc: "Whenever a hand is Scored, there’s a 1 in 5 chance to create a random Toy",
+    desc: "20% chance to create a random Toy Card (must have space) per Attack",
     img: "images/jokers/Jokers_83_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -819,14 +819,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker85",
     name: "Flip The Table!",
-    desc: "A Flush will increase the Rank of cards in your Hand by 1.",
+    desc: "Increase the Rank of cards remaining in your hand by 1 if Attack contains a Flush",
     img: "images/jokers/Jokers_85_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker86",
     name: "Catfused",
-    desc: "First hand has an equal chance to: +1 Discard, -2 Gold, +2x Mult or -1000 Score",
+    desc: "First Attack of the turn has an equal chance to: +1 Discard, -2 Gold, +2x Mult or -1000 Score",
     img: "images/jokers/Jokers_86_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "manual_first_hand_random", trigger: "onHandPlay", options: [ { value: "mult_x2", text: "+2x Mult" }, { value: "chips_-1000", text: "-1000 Chips" }, { value: "none", text: "Other/No Effect" } ], default_value: "none" }
@@ -834,7 +834,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker87",
     name: "Smiley Catmicon",
-    desc: "Face Cards give +25 Score",
+    desc: "+25 Score per face card scored",
     img: "images/jokers/Jokers_87_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["J", "Q", "K"] }, bonus: { chips: 25 } }
@@ -842,35 +842,35 @@ const JOKER_LIBRARY = [
   {
     id: "joker88",
     name: "Purresent",
-    desc: "If hand contains a Straight, then add a random Enhanced card to your hand.",
+    desc: "Add a random enhanced card to your hand if Attack contains a Straight",
     img: "images/jokers/Jokers_88_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker89",
     name: "Kungfeline",
-    desc: "+0.15x Mult for each Enhanced Card in your Deck",
+    desc: "Gains 0.15x Mult for each Enhanced card in Deck",
     img: "images/jokers/Jokers_89_77x100.png",
     chips: 0, mult: 0, xmult: 0.15, effect: null
   },
   {
     id: "joker90",
     name: "Carrot Cat",
-    desc: "8 Score for each 4, 5, 6 in Deck",
+    desc: "Gives +8 Score for each 3, 4, and 5 in Deck",
     img: "images/jokers/Jokers_90_77x100.png",
     chips: 8, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker91",
     name: "Angwy Cat",
-    desc: "If there are 0 Discards this card gives 101 Score",
+    desc: "+101 Score if 0 Discards remaining",
     img: "images/jokers/Jokers_91_77x100.png",
     chips: 101, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker92",
     name: "Cycat",
-    desc: "+5 Mult when an Ace or 10 is scored",
+    desc: "+5 Mult per Ace or 10 scored",
     img: "images/jokers/Jokers_92_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["A", "10"] }, bonus: { mult: 5 } }
@@ -878,65 +878,65 @@ const JOKER_LIBRARY = [
   {
     id: "joker93",
     name: "Furrtune Teller",
-    desc: "If the hand played contains Four of a Kind, create a Tarot Card (Must have room)",
+    desc: "Create a random Diety Card (must have space) if Attack contains Four of a Kind",
     img: "images/jokers/Jokers_93_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker94",
     name: "Five Ferocious Felines",
-    desc: "On your 5th Attack this battle, gain 7x Mult",
+    desc: "7x Mult on every 5th Attack of the battle",
     img: "images/jokers/Jokers_94_77x100.png",
     chips: 0, mult: 0, xmult: 7, effect: null
   },
   {
     id: "joker95",
     name: "Pixelcat",
-    desc: "+0.09 Mult for each Face Card in Deck",
+    desc: "Gives 0.03x Mult for each face card in Deck",
     img: "images/jokers/Jokers_95_77x100.png",
     chips: 0, mult: 0.09, xmult: 0, effect: null
   },
   {
     id: "joker96",
     name: "Kat-Boom",
-    desc: "Scored Face Cards are destroyed and add +7 Mult",
+    desc: "+7 Mult per face card scored, destroys each face card scored",
     img: "images/jokers/Jokers_96_77x100.png",
     chips: 0, mult: 7, xmult: 1, effect: null
   },
   {
     id: "joker97",
     name: "Ying Yang",
-    desc: "+1 Mult per Even card Scored",
+    desc: "+4 Mult per even card scored",
     img: "images/jokers/Jokers_97_77x100.png",
     chips: 0, mult: 0, xmult: 1,
-    effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["2", "4", "6", "8", "10"] }, bonus: { mult: 1 } }
+    effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["2", "4", "6", "8", "10"] }, bonus: { mult: 4 } }
   },
   {
     id: "joker98",
     name: "Nerd Cat Squared",
-    desc: "Aces, 4s and 9s score +.7x Mult",
+    desc: "0.7x Mult for each 4, 9, or Ace scored",
     img: "images/jokers/Jokers_98_77x100.png",
     chips: 0, mult: 0, xmult: 1,
-    effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["A", "4", "9"] }, bonus: { xmult: 0.7 } }
+    effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "rank", operator: "in", value: ["A", "4", "9"] }, bonus: { xmult: 1.7 } }
   },
   {
     id: "joker99",
     name: "Pawstronaut",
-    desc: "Playing a single Ace alone gives you 1 Bonus Discard",
+    desc: "+1 Discard if Attack is only a single Ace",
     img: "images/jokers/Jokers_99_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker100",
     name: "Stone Age Cat",
-    desc: "Gains 0.15x for every Stone card scored",
+    desc: "Gains 0.15x Mult for each Stone card scored",
     img: "images/jokers/Jokers_100_77x100.png",
     chips: 0, mult: 0, xmult: 0.15, effect: null
   },
   {
     id: "joker101",
     name: "Stucky Cat Box",
-    desc: "Gains 8 Score for every played hand that is exactly 1 card",
+    desc: "Gains x0.04 Mult if Attack has exactly 1 card",
     img: "images/jokers/Jokers_101_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "playedCardCount", comparison: "<=", value: 1 }, bonus: { chips: 8 } }
@@ -944,21 +944,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker102",
     name: "Reckless Cat",
-    desc: "Starts at 3.3x Mult, reduces 0.2x per Attack",
+    desc: "3.3x Mult, -0.2x Mult for every Attack",
     img: "images/jokers/Jokers_102_77x100.png",
     chips: 0, mult: 0, xmult: 3.3, effect: null
   },
   {
     id: "joker103",
     name: "Oh Meow!",
-    desc: "Discarding a J, Q, or K will add the same score to your next Attack",
+    desc: "Jacks, Queens, Kings, and Aces score on Discard",
     img: "images/jokers/Jokers_103_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker104",
     name: "Boxing Cat",
-    desc: "+17 Mult if hand is exactly 4 cards",
+    desc: "+17 Mult if Attack has exactly 4 cards",
     img: "images/jokers/Jokers_104_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "playedCardCount", comparison: "===", value: 4 }, bonus: { mult: 17 } }
@@ -966,14 +966,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker105",
     name: "Need A Paw?",
-    desc: "15% Chance to add a duplicate card from your deck to your hand when played hand is exactly 5 cards",
+    desc: "15% chance to duplicate a card from Deck to your hand if Attack has 5 cards",
     img: "images/jokers/Jokers_105_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker106",
     name: "Meowsers",
-    desc: "A 2 and 7 in the same hand give x5 Mult",
+    desc: "5x Mult if Attack contains a 2 and a 7",
     img: "images/jokers/Jokers_106_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "special_logic", trigger: "onHandPlay", handler_id: "meowsers_2_and_7" }
@@ -981,21 +981,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker107",
     name: "Double Glasses",
-    desc: "Retrigger 2, 3, and 5s",
+    desc: "Retrigger 2, 3, 4 and 5s",
     img: "images/jokers/Jokers_107_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: { type: "special_logic", trigger: "onHandPlay", handler_id: "retrigger_2_3_5" }
   },
   {
     id: "joker108",
     name: "Dollar Ramen Cat",
-    desc: "Discarding an Ace will give this card +10 Score",
+    desc: "Gains +10 Score per Ace Discarded",
     img: "images/jokers/Jokers_108_77x100.png",
     chips: 10, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker109",
     name: "Colacat",
-    desc: "+3 Mult per Diamonds and Hearts Card",
+    desc: "+3 Mult per Diamond or Hearts scored",
     img: "images/jokers/Jokers_109_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "suit", operator: "in", value: ["h", "d"] }, bonus: { mult: 3 } } // Diperbaiki: value: ["h", "d"]
@@ -1003,14 +1003,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker110",
     name: "Furlix The Cat",
-    desc: "Four of a Kind will add 2 Random Fur card to your hand",
+    desc: "Create a random Fur card in hand if Attack contains a Four of aKind",
     img: "images/jokers/Jokers_110_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker111",
     name: "Catfish",
-    desc: "30% chance to hit 18x Mult",
+    desc: "30% chance to 18x Mult",
     img: "images/jokers/Jokers_111_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "manual_probabilistic", trigger: "onHandPlay", probability: 0.30, bonus: { xmult: 18 } }
@@ -1025,14 +1025,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker113",
     name: "Sandy and Buck the Bull",
-    desc: "Straight gives this card 0.7x Multi bonus. High Card reduces it by 0.4x Mult",
+    desc: "Gains 0.7x Mult if Attack contains Straight, loses -0.4x Mult if Attack is a High Card",
     img: "images/jokers/Jokers_113_77x100.png",
     chips: 0, mult: 0, xmult: 0.7, effect: null
   },
   {
     id: "joker114",
     name: "Catbros",
-    desc: "+2x Mult if played hand contains a Pair",
+    desc: "2x Mult if Attack contains a Pair",
     img: "images/jokers/Jokers_114_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "handType", value: "Pair" }, bonus: { xmult: 2 } }
@@ -1040,14 +1040,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker115",
     name: "Catard",
-    desc: "Retrigger A,2,3,4,5,6,7,8s",
+    desc: "Retriggers 2s, 3s, 4s, 5s, 6s, 7s, 8s, and Aces",
     img: "images/jokers/Jokers_115_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: { type: "special_logic", trigger: "onHandPlay", handler_id: "retrigger_low_ranks" }
   },
   {
     id: "joker116",
     name: "Cat Fam",
-    desc: "+2x Mult if played hand is a Two Pair",
+    desc: "2x Mult if Attack contains a Two Pair",
     img: "images/jokers/Jokers_116_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "handType", value: "Two Pair" }, bonus: { xmult: 2 } }
@@ -1055,7 +1055,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker117",
     name: "Full Basket",
-    desc: "+2x Mult if played hand contains a Full House",
+    desc: "2x Mult if Attack contains a Full House",
     img: "images/jokers/Jokers_117_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "conditional", trigger: "onHandPlay", condition: { property: "handType", value: "Full House" }, bonus: { xmult: 2 } }
@@ -1063,21 +1063,21 @@ const JOKER_LIBRARY = [
   {
     id: "joker118",
     name: "Pokat",
-    desc: "+0.1x Mult for each Ace in Deck",
+    desc: "Gives 0.1x Mult for each Ace in Deck",
     img: "images/jokers/Jokers_118_77x100.png",
     chips: 0, mult: 0, xmult: 0.1, effect: null
   },
   {
     id: "joker119",
     name: "Zoora",
-    desc: "Your third Attack this battle will give x3 Mult",
+    desc: "3x Mult on every 3rd Attack of the battle",
     img: "images/jokers/Jokers_119_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker120",
     name: "Kola Kat",
-    desc: "+3 Mult per Spades/Clubs",
+    desc: "+3 Mult per Spade or Club scored",
     img: "images/jokers/Jokers_120_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "iterative", trigger: "onHandPlay", target: "activeHand", condition: { property: "suit", operator: "in", value: ["s", "c"] }, bonus: { mult: 3 } }
@@ -1085,35 +1085,35 @@ const JOKER_LIBRARY = [
   {
     id: "joker121",
     name: "Focus Feline",
-    desc: "x0.5 Score, x2 Mult",
+    desc: "Half Score, 2x Mult",
     img: "images/jokers/Jokers_121_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker122",
     name: "Tora",
-    desc: "First hand you play is a single 8, gain one Witchcat card chosen at random (Must have space)",
+    desc: "Create a random Witchcat card (must have space) if first Attack is only a single 8",
     img: "images/jokers/Jokers_122_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker123",
     name: "Catman!",
-    desc: "For every hand that has a 2 & 7, this card gains 0.15x Mult",
+    desc: "Gains 0.15x Mult if Attack contains a 2 and 7",
     img: "images/jokers/Jokers_123_77x100.png",
     chips: 0, mult: 0, xmult: 0.15, effect: null
   },
   {
     id: "joker124",
     name: "Everything Is Feline",
-    desc: "x4 Multi if your total amount of times you have Discarded this battle is exactly 4",
+    desc: "4x Mult on every 4th Discard of the battle",
     img: "images/jokers/Jokers_124_77x100.png",
     chips: 0, mult: 0, xmult: 4, effect: null
   },
   {
     id: "joker125",
     name: "Torini",
-    desc: "x6 Mult if played hand has a J, Q, & K",
+    desc: "6x Mult if Attack contains a Jack, Queen, and King",
     img: "images/jokers/Jokers_125_77x100.png",
     chips: 0, mult: 0, xmult: 1,
     effect: { type: "special_logic", trigger: "onHandPlay", handler_id: "torini_jqk" }
@@ -1121,14 +1121,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker126",
     name: "Purrfect Cut",
-    desc: "x2 Score, x0.5 Mult",
+    desc: "2x Score, half Mult",
     img: "images/jokers/Jokers_126_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker127",
     name: "Kora",
-    desc: "Playing a single 4 will create a Tarot card when Scored (Must have room)",
+    desc: "Create a Deity Card (must have space) per 4 scored if Attack is only a single 4",
     img: "images/jokers/Jokers_127_77x100.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
@@ -1187,14 +1187,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker143",
     name: "Tyrancat",
-    desc: "Scored Kings are destroyed and you get 1 Attack this turn and 5 Gold",
+    desc: "+1 Attack this turn and +5 Gold per King scored, destroys each King scored",
     img: "images/jokers/Jokers2_13.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker144",
     name: "Midas",
-    desc: "Gains +0.20 for every Gold card scored",
+    desc: "Gains 0.2x Mult per Gold card scored",
     img: "images/jokers/Jokers2_14.png",
     chips: 0, mult: 0, xmult: 0.2, effect: null
   },
@@ -1208,7 +1208,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker146",
     name: "Tubby Greed",
-    desc: "Pairs do no damage but give you 3 Gold",
+    desc: "Pair Attacks do no damage but give +3 Gold",
     img: "images/jokers/Jokers2_16.png",
 
     chips: 0, 
@@ -1232,7 +1232,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker147",
     name: "What The Cat!",
-    desc: "x4 if a full hand (5 cards) of Odds or Evens is played",
+    desc: "4x Mult if Attack has 5 Odd cards or 5 Even cards",
     img: "images/jokers/Jokers2_17.png",
     chips: 0, mult: 0, xmult: 1, 
     effect: { 
@@ -1303,7 +1303,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker154",
     name: "Crazy Chubby Cat",
-    desc: "+100 Score if played hand contains a Straight",
+    desc: "+12 Mult if played hand contains a Straight",
     img: "images/jokers/Jokers2_24.png",
 
     chips: 0, 
@@ -1318,8 +1318,8 @@ const JOKER_LIBRARY = [
         value: "Straight"      
       },
       bonus: {
-        chips: 100, 
-        mult: 0,
+        chips: 0, 
+        mult: 12,
         xmult: 1
       }
     }
@@ -1327,7 +1327,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker155",
     name: "ZigZag Chubby Cat",
-    desc: "+12 Mult if played hand contains a Three of a Kind ",
+    desc: "+12 Mult if played hand contains a Three of a Kind",
     img: "images/jokers/Jokers2_25.png",
     chips: 0, 
     mult: 0, 
@@ -1350,7 +1350,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker156",
     name: "Chubby Mad Joker",
-    desc: "+50 Score if played hand contains a Two Pair",
+    desc: "+14 Mult if played hand contains a Two Pair",
     img: "images/jokers/Jokers2_26.png",
 
     chips: 0, 
@@ -1365,8 +1365,8 @@ const JOKER_LIBRARY = [
         value: "Two Pair"      
       },
       bonus: {
-        chips: 50, 
-        mult: 0,
+        chips: 0, 
+        mult: 14,
         xmult: 1
       }
     }
@@ -1374,7 +1374,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker157",
     name: "Chubby Jolly",
-    desc: "+40 Score if played hand contains a Pair",
+    desc: "+8 Mult if played hand contains a Pair",
     img: "images/jokers/Jokers2_27.png",
 
     chips: 0, 
@@ -1389,8 +1389,8 @@ const JOKER_LIBRARY = [
         value: "Pair"      
       },
       bonus: {
-        chips: 40, 
-        mult: 0,
+        chips: 0, 
+        mult: 8,
         xmult: 1
       }
     }
@@ -1405,7 +1405,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker159",
     name: "Pair of Kitties",
-    desc: "Pairs give you +6 Health, +4 Mult",
+    desc: "+4 Health and +4 Mult if attack contains a Pair",
     img: "images/jokers/Jokers2_29.png",
 
     chips: 0, 
@@ -1429,7 +1429,7 @@ const JOKER_LIBRARY = [
   {
     id: "joker160",
     name: "3 Together",
-    desc: "+60 Score +10 Mult per 3 Scored",
+    desc: "+60 Score and +10 Mult per 3 scored",
     img: "images/jokers/Jokers2_30.png",
 
     chips: 0,
@@ -1454,14 +1454,14 @@ const JOKER_LIBRARY = [
   {
     id: "joker161",
     name: "Thinking Smart",
-    desc: "Create a Tarot card if the hand contains a Straight and has an Ace in it",
+    desc: "Create a random Diety card (must have space) if Attack contains a Straight and an Ace",
     img: "images/jokers/Jokers2_31.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker162",
     name: "Catten-hut!",
-    desc: "4x Mult if the played hand has both a 5 & 7",
+    desc: "4x Mult if Attack contains a 5 and 7",
     img: "images/jokers/Jokers2_32.png",
 
     chips: 0,
@@ -1477,35 +1477,35 @@ const JOKER_LIBRARY = [
   {
     id: "joker163",
     name: "Dark Hissidius",
-    desc: "If you play a Flush and have 2 cards in your hand become Spades (Chosen at random)",
+    desc: "2 random cards in your hand change to Spades if Attack contains a Flush of Hearts",
     img: "images/jokers/Jokers2_33.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker164",
     name: "Hi, Meow!",
-    desc: "First Two Attacks give +150 Score",
+    desc: "+130 Score on first 2 Attacks of turn",
     img: "images/jokers/Jokers2_34.png",
     chips: 150, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker165",
     name: "Purr Purr?",
-    desc: "Every Two Pair hand gives this card +0.1x Mult",
+    desc: "Gains 0.1x Mult if Attack contains a Two Pair",
     img: "images/jokers/Jokers2_35.png",
     chips: 0, mult: 0, xmult: 0.1, effect: null
   },
   {
     id: "joker166",
     name: "Bad Fur Day",
-    desc: "J, Q and Ks have Fur Enhancement",
+    desc: "Jacks, Queens, and Kings have Fur enhancement",
     img: "images/jokers/Jokers2_36.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker167",
     name: "Kitty Gambler",
-    desc: "Lucky cards retrigger twice",
+    desc: "Retrigger Lucky cards twice",
     img: "images/jokers/Jokers2_37.png",
     chips: 0, mult: 0, xmult: 1, 
     effect: { type: "special_logic", trigger: "onHandPlay", handler_id: "retrigger_lucky_cards" }
@@ -1513,28 +1513,28 @@ const JOKER_LIBRARY = [
   {
     id: "joker168",
     name: "Typing Paws",
-    desc: "As long as you have not Discarded this battle, 3x Mult",
+    desc: "3x Mult if 0 Discards used this battle",
     img: "images/jokers/Jokers2_38.png",
     chips: 0, mult: 0, xmult: 3, effect: null
   },
   {
     id: "joker169",
     name: "Eepy Time!",
-    desc: "Gains +0.10 Score when only 1 card is played",
+    desc: "Gains +10 Score if Attack has exactly 1 card",
     img: "images/jokers/Jokers2_39.png",
     chips: 0.1, mult: 0, xmult: 1, effect: null
   },
   {
     id: "joker170",
     name: "Feline Fine",
-    desc: "0.03x Mult for every Non Face Card in your deck",
+    desc: "Gives 0.03x Mult for each non-face card in Deck",
     img: "images/jokers/Jokers2_40.png",
     chips: 0, mult: 0, xmult: 0.03, effect: null
   },
   {
     id: "joker171",
     name: "BAM! You Are Cooking",
-    desc: "If your 1st Attack of the turn contains a Four of a Kind, destroy this card and get 3 uncommon or rare Jokers (if have space)",
+    desc: "Create 3 Uncommon or greater rarity Jokers if final Attack of the turn contains Four of a Kind, destroy this Joker",
     img: "images/jokers/Jokers2_41.png",
     chips: 0, mult: 0, xmult: 1, effect: null
   }
